@@ -33,8 +33,9 @@ class ScoreScreen extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 65,
                       fontFamily: 'Palatino',
-                      fontStyle: FontStyle.italic,
-                      color: Colors.redAccent,
+                      // fontStyle: FontStyle.italic,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red[500],
                     ),
                   ),
                 ),

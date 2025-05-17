@@ -4,6 +4,9 @@ import 'package:quizapp/screens/category_screen.dart';
 
 final _formkey = GlobalKey<FormState>();
 
+
+
+
 class LoginScreen extends StatefulWidget {
   LoginScreen({super.key});
   // Name: Starts with capital, contains at least one number, allows letters and spaces

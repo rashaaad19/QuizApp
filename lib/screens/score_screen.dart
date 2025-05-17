@@ -6,15 +6,23 @@ import 'package:quizapp/screens/login_screen.dart';
 class ScoreScreen extends StatelessWidget {
   int score;
   int numOfQuestions;
-  ScoreScreen({super.key, required this.numOfQuestions, required this.score});
+  Map<String, dynamic> selectedAnswers;
+  ScoreScreen({
+    super.key,
+    required this.numOfQuestions,
+    required this.score,
+    required this.selectedAnswers,
+  });
 
   @override
   Widget build(BuildContext context) {
+    print('Received in ScoreScreen: $selectedAnswers'); // Add this line
+
     return Scaffold(
-      backgroundColor: Colors.grey[100], 
+      backgroundColor: Colors.grey[100],
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.all(16.0), 
+          padding: const EdgeInsets.all(16.0),
           child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +51,10 @@ class ScoreScreen extends StatelessWidget {
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.cyan[600],
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 40,
+                      vertical: 16,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -63,7 +74,10 @@ class ScoreScreen extends StatelessWidget {
                 TextButton(
                   style: TextButton.styleFrom(
                     backgroundColor: Colors.red[100],
-                    padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 16),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 40,
+                      vertical: 16,
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
                     ),
@@ -76,10 +90,7 @@ class ScoreScreen extends StatelessWidget {
                   },
                   child: Text(
                     'Logout',
-                    style: TextStyle(
-                      color: Colors.red[700],
-                      fontSize: 16,
-                    ),
+                    style: TextStyle(color: Colors.red[700], fontSize: 16),
                   ),
                 ),
               ],

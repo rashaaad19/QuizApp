@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/globals.dart';
 import 'package:quizapp/screens/category_screen.dart';
 import 'package:quizapp/screens/login_screen.dart';
 
@@ -19,7 +20,7 @@ class ScoreScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Your final score is',
+                  'Hey ${AppGlobals.userName}, your final score is',
                   style: TextStyle(
                     fontSize: 24,
                     fontFamily: 'Palatino',

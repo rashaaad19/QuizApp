@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quizapp/globals.dart';
 import 'package:quizapp/screens/category_screen.dart';
 
 final _formkey = GlobalKey<FormState>();
@@ -84,8 +85,9 @@ class _LoginScreenState extends State<LoginScreen> {
                             hintText: 'Username',
                           ),
                           validator: (value) {
-                            if (value == null || value.isEmpty)
-                             { return 'Required';}
+                            if (value == null || value.isEmpty) {
+                              return 'Required';
+                            }
                             if (!widget.nameRegex.hasMatch(value)) {
                               WidgetsBinding.instance.addPostFrameCallback((_) {
                                 showDialog(
@@ -101,6 +103,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               });
                               return '!';
                             }
+                            AppGlobals.userName = value;
                             return null;
                           },
                         ),
